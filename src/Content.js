@@ -2,24 +2,18 @@ import React from "react"
 import { useState } from "react";
 
 const Content = () => {
+    const [word, setWord] = useState("Earn");
 
     function handleNameChange() {
         const name = ["Grow","Earn","Give"];
         const int = Math.floor(Math.random()*3);
-        return name[int];
-    }
-
-    const [word, setWord] = useState("Earn");
-
-    function setNewWord(){
-        const new_word = handleNameChange();
-        setWord(new_word);
+        setWord(name[int]);
     }
 
     return (
         <main>
             <p>Let {word} money</p>
-            <button onClick={setNewWord}>Submit</button>
+            <button onClick={handleNameChange}>Submit</button>
         </main>
 
     )
