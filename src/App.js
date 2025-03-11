@@ -35,7 +35,7 @@ function App() {
 
   return (
     <div>
-      <Header/>
+      <Header title="To Do List"/>
       <Content 
         items = {items}
         handleCheck = {handleCheck}
