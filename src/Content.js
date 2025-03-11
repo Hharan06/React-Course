@@ -8,9 +8,14 @@ const Content = () => {
         return name[int];
     }
 
+    const handleClick = (name) => {
+        console.log(`Hello ${name}`);
+    }
+
     return (
         <main>
             <p>Let {handleNameChange()} money</p>
+            <button onClick={() => handleClick("World")}>Submit</button>
         </main>
         
     )
