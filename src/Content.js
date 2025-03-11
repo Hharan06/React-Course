@@ -15,7 +15,7 @@ const Content = () => {
     return (
         <main>
             <p>Let {handleNameChange()} money</p>
-            <button onClick={() => handleClick("World")}>Submit</button>
+            <button onClick={() => handleClick("Hari")}>Submit</button>
         </main>
         
     )
