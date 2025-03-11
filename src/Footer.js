@@ -1,10 +1,10 @@
 import React from "react";
 
-const Footer = () => {
+const Footer = ({length}) => {
   const year = new Date().getFullYear(); // 
 
   return (
-    <footer>Copyright &copy; {year}</footer> // 
+    <footer>{length} {length>1 ? "items": "item"} in a list</footer> // 
   );
 };
 
