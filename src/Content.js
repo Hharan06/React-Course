@@ -1,4 +1,5 @@
 import React from "react"
+import { useState } from "react";
 
 const Content = () => {
 
@@ -8,16 +9,19 @@ const Content = () => {
         return name[int];
     }
 
-    const handleClick = (name) => {
-        console.log(`Hello ${name}`);
+    const [word, setWord] = useState("Earn");
+
+    function setNewWord(){
+        const new_word = handleNameChange();
+        setWord(new_word);
     }
 
     return (
         <main>
-            <p>Let {handleNameChange()} money</p>
-            <button onClick={() => handleClick("Hari")}>Submit</button>
+            <p>Let {word} money</p>
+            <button onClick={setNewWord}>Submit</button>
         </main>
-        
+
     )
 }
 
