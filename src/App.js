@@ -13,11 +13,28 @@ function App() {
 
     const [searchItem, setSearchItem] = useState("");
 
+    // const API_URL = "http://localhost:3500/items";
+
     useEffect(() => {
       console.log("Rendering")
       const storedItems = JSON.parse(localStorage.getItem("todo_list"));
       setItems(storedItems)
     }, [])
+
+    // npx json-server -p 3500 -w data/db.json
+    // useEffect(() => {
+    //   const fetchItems = async () => {
+    //     try {
+    //       const response = await fetch(API_URL);
+    //       const listItems = await response.json();
+    //       setItems(listItems);
+    //     } catch (error) {
+    //       console.log(error.stack);
+    //     }
+
+    //   }
+    //   (async () => fetchItems())()
+    // }, [])
 
     const addItem = (item) => {
       const id = items.length ? items[items.length - 1].id + 1 : 1
