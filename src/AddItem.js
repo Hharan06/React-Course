@@ -3,7 +3,7 @@ import { FaPlus } from "react-icons/fa"
 import { useRef } from "react"
 
 const AddItem = ({newItem, setNewItem, handleSubmit}) => {
-  const inputRef = useRef()        //For Focus Hnadling
+  const inputRef = useRef()        //For Focus Handling
   return (
     <form className="addForm" onSubmit={handleSubmit}>
         <label htmlFor="addItem">Add Item:</label>
